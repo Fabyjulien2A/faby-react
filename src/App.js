@@ -1,14 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Router from './Router';
 
-export default function App(){
+function App() {
   return (
-    <div>
-      <h1>Burger Houses</h1>
+    <div className="App">
+      <Router />
     </div>
-
-
-  )
-
-    
-  
+  );
 }
+
+export default App;
