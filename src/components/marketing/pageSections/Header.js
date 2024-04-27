@@ -5,7 +5,7 @@ import Button from '../../elements/Button';
 
 export default function Header() {
   return (
-    <div className='flex items-center justify-between py-10 '>
+    <div className='relative z-10 flex items-center justify-between py-10 '>
      <div className='w-full'>
         <img src={Logo} alt="Burger House" className='w-64'/>
      </div>
@@ -17,11 +17,11 @@ export default function Header() {
       </div>
 
       <div className='flex items-center justify-end mt-5'>
-        <Button className={'italic mr-2'}>
+        <Button className='mr-3'>
           Inscription
         </Button>
         
-        <Button className={'italic'}>
+        <Button className='' color='black'>
           Connexion
         </Button>
       </div>
