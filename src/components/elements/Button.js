@@ -4,13 +4,21 @@ import React from 'react';
 
 export default function Button({ children, className, color, theme }) {
 
-let background
+  let background
 
-if (color === 'black') {background = 'bg-black'}
-else if (color === 'danger') {background = 'bg-red-500'}
-else {background = 'bg-yellow-400 '}
+  if (color === 'black') { background = 'bg-black' }
+  else if (color === 'danger') { background = 'bg-red-500' }
+  else { background = 'bg-yellow-400 ' }
 
-  switch(theme){
+  switch (color) {
+    case 'black': background = "bg-black"
+      break
+    case 'danger': background = "bg-red-500"
+      break
+    default: background = "bg-yellow-400"
+  }
+
+  switch (theme) {
     case 'small':
       return (
         <div>

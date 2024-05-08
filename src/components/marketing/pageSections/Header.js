@@ -17,11 +17,11 @@ export default function Header() {
       </div>
 
       <div className='flex items-center justify-end mt-5'>
-        <Button className='mr-3'>
+        <Button className='mr-3 tracking-widest'>
           Inscription
         </Button>
         
-        <Button className='' color='black'>
+        <Button className='tracking-widest' color='black'>
           Connexion
         </Button>
       </div>
