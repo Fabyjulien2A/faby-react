@@ -3,7 +3,9 @@
 
 body{
     font-family: roboto;
+    @apply text-amber-800;
 }
+
 
 .animate{
     -webkit-transition: all .3s ease-in-out;

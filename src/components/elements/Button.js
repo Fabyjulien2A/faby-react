@@ -1,24 +1,36 @@
 import React from 'react';
 
-
-
+// Composant fonctionnel Button
+// Ce composant reçoit des enfants, une classe CSS, une couleur et un thème en tant que props
 export default function Button({ children, className, color, theme }) {
 
-  let background
+  // Déclaration de la variable background pour la couleur de fond du bouton
+  let background;
 
-  if (color === 'black') { background = 'bg-black' }
-  else if (color === 'danger') { background = 'bg-red-500' }
-  else { background = 'bg-yellow-400 ' }
-
-  switch (color) {
-    case 'black': background = "bg-black"
-      break
-    case 'danger': background = "bg-red-500"
-      break
-    default: background = "bg-yellow-400"
+  // Définition de la couleur de fond en fonction du prop color
+  if (color === 'black') { 
+    background = 'bg-black'; 
+  } else if (color === 'danger') { 
+    background = 'bg-red-500'; 
+  } else { 
+    background = 'bg-yellow-400'; 
   }
 
+  // Utilisation d'un switch pour définir la couleur de fond (redondant avec le code précédent)
+  switch (color) {
+    case 'black':
+      background = "bg-black";
+      break;
+    case 'danger':
+      background = "bg-red-500";
+      break;
+    default:
+      background = "bg-yellow-400";
+  }
+
+  // Utilisation d'un switch pour définir le style du bouton en fonction du thème
   switch (theme) {
+    // Si le thème est 'small', retourner un bouton avec des petites dimensions
     case 'small':
       return (
         <div>
@@ -28,6 +40,7 @@ export default function Button({ children, className, color, theme }) {
         </div>
       );
 
+    // Si le thème est 'big', retourner un bouton avec des grandes dimensions
     case 'big':
       return (
         <div>
@@ -37,6 +50,7 @@ export default function Button({ children, className, color, theme }) {
         </div>
       );
 
+    // Par défaut, retourner un bouton avec des dimensions moyennes
     default:
       return (
         <div>
