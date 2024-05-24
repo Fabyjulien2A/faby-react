@@ -4,6 +4,7 @@
 body{
     font-family: roboto;
     @apply text-amber-800;
+    overflow-x: hidden
 }
 
 

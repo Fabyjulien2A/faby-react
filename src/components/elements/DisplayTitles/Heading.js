@@ -2,10 +2,10 @@ import React from 'react'
 
 // Composant fonctionnel Heading
 // Ce composant reçoit des enfants (children), un variant, un theme et un display en tant que props
-export default function Heading({ children, variant, theme, display }) {
+export default function Heading({ children, variant, theme, display, alignement, className }) {
   // Classe CSS par défaut utilisée pour les titres
-  const classDefault = "mt-5 uppercase";
-  let font, color;
+  const classDefault = "uppercase";
+  let font, color, align;
 
   // Détermination de la classe de police en fonction du thème
   switch (theme) {
@@ -25,13 +25,24 @@ export default function Heading({ children, variant, theme, display }) {
       color = "text-black"; // Utilise la couleur noire par défaut
   }
 
+  switch (alignement) {
+    case "center":
+      align = "justify-center"; // Utilise une couleur grise si le display est "gray"
+      break;
+      case "right":
+        align = "justify-end"; // Utilise une couleur grise si le display est "gray"
+        break;
+    default:
+      align = "justify-start"; // Utilise la couleur noire par défaut
+  }
+
   // Détermination du type de balise de titre à utiliser en fonction du variant
   switch (variant) {
     case "h3":
       return (
         // Conteneur flex pour centrer le titre horizontalement et verticalement
-        <div className='flex items-center justify-center my-5'>
-          <h3 className={`text-2xl ${classDefault} ${font} ${color}`}>
+        <div className={`flex ${align}`}>
+          <h3 className={`text-2xl ${classDefault} ${className} ${font} ${color}`}>
             {children}
           </h3>
         </div>
@@ -40,8 +51,8 @@ export default function Heading({ children, variant, theme, display }) {
       case "h4":
         return (
           // Conteneur flex pour centrer le titre horizontalement et verticalement
-          <div className='flex items-center justify-center my-5'>
-            <h3 className={`text-2xl ${classDefault} ${font} ${color}`}>
+          <div className={`flex ${align}`}>
+            <h3 className={`text-lg ${classDefault} ${className} ${font} ${color}`}>
               {children}
             </h3>
           </div>
@@ -50,8 +61,8 @@ export default function Heading({ children, variant, theme, display }) {
     default:
       return (
         // Conteneur flex pour centrer le titre horizontalement et verticalement
-        <div className='flex items-center justify-center my-5'>
-          <h2 className={`${theme === "black" ? "text-5xl " : "text-3xl "} ${classDefault} ${font} ${color}`}>
+        <div className={`flex ${align}`}>
+          <h2 className={`${theme === "black" ? "text-5xl " : "text-3xl "} ${className} ${classDefault} ${font} ${color}`}>
             {children}
           </h2>
         </div>

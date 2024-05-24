@@ -17,7 +17,7 @@ export default function Products() {
       </HeadingTitles>
 
       {/* Sous-titre avec un thème noir */}
-      <Heading theme="black">
+      <Heading theme="black" alignement="center">
         Choisissez et savourez
       </Heading>
 
@@ -38,7 +38,7 @@ export default function Products() {
           </div>
           {/* Contenu du produit : titre, description et bouton */}
           <div className='flex flex-col items-center justify-center px-5 pb-5'>
-            <Heading variant="h3">
+            <Heading variant="h3" className="my-5">
               lorem ipsum color
             </Heading>
             <p className='text-center'>
@@ -60,7 +60,7 @@ export default function Products() {
           </div>
           {/* Contenu du produit : titre, description et bouton */}
           <div className='flex flex-col items-center justify-center px-5 pb-5'>
-            <Heading variant="h3">
+            <Heading variant="h3" className="my-5">
               lorem ipsum color
             </Heading>
             <p className='text-center'>
@@ -82,7 +82,7 @@ export default function Products() {
           </div>
           {/* Contenu du produit : titre, description et bouton */}
           <div className='flex flex-col items-center justify-center px-5 pb-5'>
-            <Heading variant="h3">
+            <Heading variant="h3" className="my-5">
               lorem ipsum color
             </Heading>
             <p className='text-center'>
