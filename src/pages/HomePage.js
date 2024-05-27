@@ -6,6 +6,7 @@ import LastProducts from '../components/marketing/pageSections/LastProducts';
 import Products from '../components/marketing/pageSections/Products';
 import Event from '../components/marketing/pageSections/Event';
 import Booking from '../components/marketing/pageSections/Booking';
+import Footer from '../components/marketing/pageSections/footer';
 
 // Composant fonctionnel HomePage
 // Ce composant représente la page d'accueil et inclut plusieurs sections
@@ -28,6 +29,9 @@ export default function HomePage() {
        {/* Section formulaire de contact */}
       <Booking />
 
+       {/* Section footer */}
+      
+      <Footer/>
       
     </>
   );

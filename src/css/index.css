@@ -1,21 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300; 0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto&display=swap' ); 
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto&display=swap');
 
-body{
+body {
     font-family: roboto;
     @apply text-amber-800;
     overflow-x: hidden
 }
 
-
-.animate{
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition:    all .3s ease-in-out;
-    -o-transition:      all .3s ease-in-out;
-    -ms-transition:     all .3s ease-in-out;
-    transition:         all .3s ease-in-out;
+#name,
+#email,
+#date,
+#time,
+#customer {
+    @apply block w-full border-gray-400 rounded-md focus:ring-yellow-500 focus:border-yellow-500 focus:border;
 }
 
-.shadowTittleSecondary{
+#sendBooking {
+    @apply w-full py-2 font-black text-white uppercase bg-red-500 rounded-md cursor-pointer hover:bg-red-600 hover:tracking-widest;
+}
+
+
+
+
+
+.animate {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.shadowTittleSecondary {
     text-shadow: 3px 3px #fee7ba;
 }
