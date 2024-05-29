@@ -1,6 +1,7 @@
 import React from 'react';
 // Importation des ressources médias
 import Logo from '../../../medias/svg/Logo-burger-house.svg';
+import Picto from '../../../medias/svg/picto-burger-house.svg'
 import Icone from '../../../medias/svg/ico-bag-clickAndCollect.svg';
 // Importation du composant Button
 import Button from '../../elements/Button';
@@ -15,13 +16,14 @@ export default function Header() {
       {/* Section du logo */}
       <div className='w-full'>
         {/* Logo de l'entreprise avec une largeur définie */}
-        <img src={Logo} alt="Burger House" className='w-64' />
+        <img src={Logo} alt="Burger House" className='hidden w-64 md:block' />
+        <img src={Picto} alt="Burger House responsive" className='w-10 md:hidden' />
       </div>
 
       {/* Section des options et des boutons */}
       <div className='w-full'>
         {/* Conteneur flex pour l'icône et le texte de commande */}
-        <div className='flex items-center justify-end'>
+        <div className='items-center justify-end hidden md:flex'>
           <img src={Icone} alt="Icône de commande" className='w-5 h-5 mr-1' />
           <span>Commandez votre repas en ligne</span>
         </div>

@@ -13,11 +13,11 @@ export default function footer() {
     return (
         // Utilisation du composant Container pour un conteneur global
         <Container>
-            <div className='relative p-5 mb-20 text-white'>
+            <div className='relative p-5 text-white lg:mb-20'>
                 {/* Image de fond positionnée absolument */}
                 <img src={BackgroundImage} alt="Un plan de travail" className="absolute top-0 left-0 z-0 object-cover w-full h-full bg-black" />
-                <div className='relative z-10 grid grid-cols-2 h-96'>
-                    <div className='w-full p-5 mt-20 mb-28'>
+                <div className='relative z-10 grid md:grid-cols-2'>
+                    <div className='w-full p-5 mt-10 md:mt-20 md:mb-28'>
                         {/* Logo du footer */}
                         <img src={Logo} alt="Logo footer" className='w-2/3' />
                         <p className='mt-10'>
@@ -28,16 +28,16 @@ export default function footer() {
                         </p>
                     </div>
 
-                    <div className='flex flex-col items-center justify-center w-full h-full'>
+                    <div className='flex flex-col items-start justify-center h-full p-5 mb-10 md:w-full md:items-center md:mb-0 md:p-0 '>
                         {/* Informations de contact */}
                         <div className='flex items-center'>
-                            <MapPinIcon className='w-10 h-10 mr-5' />
-                            <span className='text-lg font-extrabold uppercase -tracking-tighter'>15 place bellecour, 6900 Lyon</span>
+                            <MapPinIcon className='w-6 h-6 mr-5 md:h-10 md:w-10' />
+                            <span className='text-sm font-extrabold uppercase md:text-lg -tracking-tighter'>15 place bellecour, 6900 Lyon</span>
                         </div>
 
                         <div className='flex items-center mt-5'>
-                            <EnvelopeIcon className='w-10 h-10 mr-5' />
-                            <span className='text-lg font-extrabold uppercase -tracking-tighter'>burger@jgjhj.com</span>
+                            <EnvelopeIcon className='w-6 h-6 mr-5 md:h-10 md:w-10' />
+                            <span className='text-sm font-extrabold uppercase md:text-lg -tracking-tighter'>burger@jgjhj.com</span>
                         </div>
                     </div>
                 </div>

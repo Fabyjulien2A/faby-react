@@ -62,7 +62,7 @@ export default function Heading({ children, variant, theme, display, alignement,
       return (
         // Conteneur flex pour centrer le titre horizontalement et verticalement
         <div className={`flex ${align}`}>
-          <h2 className={`${theme === "black" ? "text-5xl " : "text-3xl "} ${className} ${classDefault} ${font} ${color}`}>
+          <h2 className={`${theme === "black" ? "text-3xl lg:text-5xl " : "text-3xl "} ${className} ${classDefault} ${font} ${color}`}>
             {children}
           </h2>
         </div>

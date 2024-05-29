@@ -4,7 +4,7 @@ import React from 'react';
 export default function Container({ children }) {
     return (
         // Div englobante avec des classes CSS Tailwind
-        <div className='h-full max-w-6xl m-auto'>
+        <div className='h-full max-w-6xl px-5 m-auto xl:px-0'>
             {/* Rendu des enfants passés au composant */}
             {children}
         </div>

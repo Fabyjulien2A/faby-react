@@ -17,7 +17,7 @@ export default function Products() {
       </HeadingTitles>
 
       {/* Sous-titre avec un thème noir */}
-      <Heading theme="black" alignement="center">
+      <Heading theme="black" alignement="center" className="my-5 text-center">
         Choisissez et savourez
       </Heading>
 
@@ -27,10 +27,10 @@ export default function Products() {
       </p>
 
       {/* Grille de produits */}
-      <div className='grid grid-cols-3 mt-10 mb-20 gap-x-1'>
+      <div className='grid mt-10 mb-20 lg:grid-cols-3 gap-x-1'>
         
         {/* Première colonne de la grille */}
-        <div className='w-full h-full'>
+        <div className='w-full h-full mx-auto lg:w-full'>
           {/* Conteneur de l'image avec positionnement relatif */}
           <div className='relative w-full h-72'>
             {/* Image du produit avec object-cover pour ajustement */}
@@ -45,14 +45,14 @@ export default function Products() {
               Lorem ipsum dolor sit amet
             </p>
             <br/>
-            <Button color="danger" className="font-black">
+            <Button color="danger" className="mb-10 font-black lg:mb-0">
               Commandez
             </Button>
           </div>
         </div>
 
         {/* Deuxième colonne de la grille */}
-        <div className='w-full h-full'>
+        <div className='w-full h-full mx-auto lg:w-full'>
           {/* Conteneur de l'image avec positionnement relatif */}
           <div className='relative w-full h-72'>
             {/* Image du produit avec object-cover pour ajustement */}
@@ -67,14 +67,14 @@ export default function Products() {
               Lorem ipsum dolor sit amet
             </p>
             <br/>
-            <Button color="danger" className="font-black">
+            <Button color="danger" className="mb-10 font-black lg:mb-0">
               Commandez
             </Button>
           </div>
         </div>
 
         {/* Troisième colonne de la grille */}
-        <div className='w-full h-full'>
+        <div className='w-full h-full mx-auto lg:w-full'>
           {/* Conteneur de l'image avec positionnement relatif */}
           <div className='relative w-full h-72'>
             {/* Image du produit avec object-cover pour ajustement */}
@@ -89,7 +89,7 @@ export default function Products() {
               Lorem ipsum dolor sit amet
             </p>
             <br/>
-            <Button color="danger" className="font-black">
+            <Button color="danger" className="font-black  lg:mb-0">
               Commandez
             </Button>
           </div>
